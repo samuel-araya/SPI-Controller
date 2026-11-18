@@ -3,15 +3,15 @@
 module spi_controller(
     output MOSI,
     output SS,
-    output wire SCLK,
+    input CLK,
+    output SCLK
     input MISO
 );
  
-    reg clk = 1'b0;
-    assign SCLK = clk
+ 
 
-    always @(*) begin
-        clk = ~clk;
+    always @(posedge CLK) begin
+        
     end
 
 endmodule 
