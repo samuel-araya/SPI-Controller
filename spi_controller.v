@@ -1,17 +1,21 @@
-`timescale 1ns/1ps
-
 module spi_controller(
-    output MOSI,
-    output SS,
+    output reg MOSI,
+    output reg SS,
     input CLK,
-    output SCLK
+    output SCLK,
     input MISO
 );
  
- 
+    
 
+    initial begin
+        MOSI = 1'b0;
+        SS = 1'b0;
+    end
+
+    assign SCLK = CLK;
     always @(posedge CLK) begin
-        
+        MOSI <= ~MOSI;
     end
 
 endmodule 

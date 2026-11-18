@@ -1,0 +1,105 @@
+$date
+	Wed Nov 18 16:23:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module spi_tb $end
+$var wire 1 ! SS2 $end
+$var wire 1 " SCLK2 $end
+$var wire 1 # MOSI2 $end
+$var reg 1 $ CLK2 $end
+$var reg 1 % MISO2 $end
+$scope module dut $end
+$var wire 1 $ CLK $end
+$var wire 1 % MISO $end
+$var wire 1 " SCLK $end
+$var reg 1 # MOSI $end
+$var reg 1 ! SS $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0%
+0$
+0#
+0"
+0!
+$end
+#10000
+1#
+1"
+1$
+#20000
+0"
+0$
+#30000
+0#
+1"
+1$
+#40000
+0"
+0$
+#50000
+1#
+1"
+1$
+#60000
+0"
+0$
+#70000
+0#
+1"
+1$
+#80000
+0"
+0$
+#90000
+1#
+1"
+1$
+#100000
+0"
+0$
+#110000
+0#
+1"
+1$
+#120000
+0"
+0$
+#130000
+1#
+1"
+1$
+#140000
+0"
+0$
+#150000
+0#
+1"
+1$
+#160000
+0"
+0$
+#170000
+1#
+1"
+1$
+#180000
+0"
+0$
+#190000
+0#
+1"
+1$
+#200000
+0"
+0$
