@@ -1,0 +1,41 @@
+#! /opt/homebrew/Cellar/icarus-verilog/13.0/bin/vvp
+:ivl_version "13.0 (stable)" "(v13_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/13.0/lib/ivl/va_math.vpi";
+S_0x105abd730 .scope module, "spi_tb" "spi_tb" 2 4;
+ .timescale -9 -12;
+o0x91c820010 .functor BUFZ 1, c4<z>; HiZ drive
+v0x105ac0650_0 .net "MISO2", 0 0, o0x91c820010;  0 drivers
+o0x91c820040 .functor BUFZ 1, c4<z>; HiZ drive
+v0x105ac06f0_0 .net "MOSI2", 0 0, o0x91c820040;  0 drivers
+o0x91c820070 .functor BUFZ 1, c4<z>; HiZ drive
+v0x105ac0790_0 .net "SCLK2", 0 0, o0x91c820070;  0 drivers
+o0x91c8200a0 .functor BUFZ 1, c4<z>; HiZ drive
+v0x105ac0830_0 .net "SS2", 0 0, o0x91c8200a0;  0 drivers
+S_0x105abca20 .scope module, "dut" "spi_controller" 2 11, 3 3 0, S_0x105abd730;
+ .timescale -9 -12;
+    .port_info 0 /OUTPUT 1 "MOSI";
+    .port_info 1 /OUTPUT 1 "SS";
+    .port_info 2 /OUTPUT 1 "SCLK";
+    .port_info 3 /INPUT 1 "MISO";
+v0x105abcc20_0 .net "MISO", 0 0, o0x91c820010;  alias, 0 drivers
+v0x105ac0470_0 .net "MOSI", 0 0, o0x91c820040;  alias, 0 drivers
+v0x105ac0510_0 .net "SCLK", 0 0, o0x91c820070;  alias, 0 drivers
+v0x105ac05b0_0 .net "SS", 0 0, o0x91c8200a0;  alias, 0 drivers
+    .scope S_0x105abd730;
+T_0 ;
+    %vpi_call 2 20 "$dumpfile", "test_spi.vcd" {0 0 0};
+    %vpi_call 2 21 "$dumpvars" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "spi_tb.v";
+    "./spi_controller.v";
